@@ -1,0 +1,54 @@
+@import url(../App.css);
+.header {
+  display: flex;
+  position: relative;
+  padding: 20px;
+  & .hamburger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    z-index: 2;
+    & .icon {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  & .nav__mobile {
+    display: none;
+    color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px) saturate(200%) contrast(100%) brightness(100%);
+    transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    & ul {
+      display: flex;
+      flex-direction: column;
+      padding: 100px 25px;
+      gap: 30px;
+      list-style: none;
+      & li {
+        width: 100%;
+        padding: 10px 0;
+        border: 2px solid transparent;
+        &:hover{
+          border-bottom: 2px solid gray;
+        }
+        & span {
+          color: red;
+        }
+      }
+    }
+    &.open {
+      display: block;
+    }
+  }
+  & .nav__desktop {
+    display: none;
+  }
+}

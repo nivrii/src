@@ -1,0 +1,44 @@
+@import url(../App.css);
+.crew__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  overflow-x: hidden;
+  text-align: center;
+  & .crew__header {
+    & h2 {
+      color: white;
+      font-size: 1rem;
+      text-transform: uppercase;
+      & span {
+        color: gray;
+      }
+    }
+  }
+  & .crew__content {
+    width: 100vw;
+    & .img__div {
+      width: 40vw;
+      margin: auto;
+      height: max-content;
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    & .crew__toggle {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 150px;
+      margin: auto;
+      & .toggle {
+        height: 12px;
+        width: 12px;
+        background-color: gray;
+        border-radius: 50%;
+      }
+    }
+  }
+}
