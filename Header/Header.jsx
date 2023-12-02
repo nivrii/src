@@ -4,16 +4,13 @@ import logo from "../assets/shared/logo.svg";
 import Nav from "./Nav";
 
 function Header() {
- 
   return (
     <div className="header">
-      <div className="logo__enclose">
-        <div className="icon">
-          <img src={logo} alt="logo" />
-        </div>
-        <div className="line"></div>
+      <div className="logo__div">
+        <img src={logo} alt="logo" />
       </div>
-    <Nav  />
+      <div className="line"></div>
+      <Nav />
     </div>
   );
 }

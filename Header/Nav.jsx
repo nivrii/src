@@ -6,6 +6,11 @@ import { useEffect, useState } from "react";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const close = () => {
+    const open = document.querySelector(".nav__mobile");
+    open.classList.remove("open");
+    setIsOpen(!isOpen);
+  };
   useEffect(() => {
     const toggler = document.querySelector(".hamburger");
     const open = document.querySelector(".nav__mobile");
@@ -28,25 +33,22 @@ function Nav() {
       </div>
       <div className="nav__mobile">
         <ul>
-          <li>
+          <li onClick={close}>
             <Link to="/" style={{ textDecoration: "none" }}>
               <span>01</span> Home
             </Link>
-            <div className="underline"></div>
           </li>
-          <li>
+          <li onClick={close}>
             <Link to="/crew" style={{ textDecoration: "none" }}>
               <span>02</span> Crew
             </Link>
-            <div className="underline"></div>
           </li>
-          <li>
+          <li onClick={close}>
             <Link to="/destination" style={{ textDecoration: "none" }}>
               <span>03</span> Destination
             </Link>
-            <div className="underline"></div>
           </li>
-          <li>
+          <li onClick={close}>
             <Link to="/technology" style={{ textDecoration: "none" }}>
               <span>04</span> Technology
             </Link>

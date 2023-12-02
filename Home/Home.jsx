@@ -11,12 +11,13 @@ function Home() {
     updateSize();
     return () => window.removeEventListener("resize", updateSize);
   }, []);
-  console.log(size[0])
+
   size[0] <= 450
     ? (document.body.style.background = bgMobile[0].src)
     : size[0] <= 768
     ? (document.body.style.background = bgTablet[0].src)
     : (document.body.style.background = bgDesktop[0].src);
+    
   return (
     <>
       <div className="body__home">
