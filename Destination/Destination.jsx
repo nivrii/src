@@ -1,9 +1,12 @@
-import { useState, useLayoutEffect } from "react";
+import { useState, useLayoutEffect, useEffect } from "react";
 import { destinations } from "../data.js";
+import './destination.css'
 import { bgMobile, bgDesktop, bgTablet } from "../bg";
 
 export function Destination() {
   const [size, setSize] = useState([0, 0]);
+  const [content, setContent] = useState(0);
+  const [active, setActive] = useState(false)
   useLayoutEffect(() => {
     function updateSize() {
       setSize([window.innerWidth, window.innerHeight]);
@@ -17,12 +20,22 @@ export function Destination() {
     : size[0] <= 768
     ? (document.body.style.background = bgTablet[1].src)
     : (document.body.style.background = bgDesktop[1].src);
-  const [content, setContent] = useState(0);
+  
+    // function isActive(index) {
+    //   setContent(index)
+    //   const selected = destinations[content].name
+    //   console.log(selected)
+    // }
+    useEffect(()=>{
+      const selected = destinations[content].name
+      selected.style.color = 'white'
+      console.log(selected)
+    },[content])
 
   return (
     <div className="destination__div">
       <div className="destination__header">
-        <h2>01 pick your destination</h2>
+        <h2><span>0{content + 1}</span> pick your destination</h2>
       </div>
 
       <div className="destination__content">
@@ -30,7 +43,6 @@ export function Destination() {
           <img
             src={destinations[content].images.webp}
             alt="destination"
-            style={{ width: "150px", height: "150px" }}
           />
         </div>
 

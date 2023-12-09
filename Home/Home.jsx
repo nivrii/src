@@ -17,7 +17,7 @@ function Home() {
     : size[0] <= 768
     ? (document.body.style.background = bgTablet[0].src)
     : (document.body.style.background = bgDesktop[0].src);
-    
+
   return (
     <>
       <div className="body__home">
@@ -31,7 +31,9 @@ function Home() {
             world experience!
           </p>
         </div>
-        <div className="explore__home">Explore</div>
+        <div className="explore__home">
+          <div className="explore">Explore</div>
+        </div>
       </div>
     </>
   );

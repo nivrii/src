@@ -7,38 +7,58 @@
   overflow-x: hidden;
   text-align: center;
   & .crew__header {
-    & h2 {
-      color: white;
-      font-size: 1rem;
-      text-transform: uppercase;
-      & span {
-        color: gray;
-      }
-    }
+    margin-top: 20px;
   }
   & .crew__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100vw;
     & .img__div {
-      width: 40vw;
-      margin: auto;
-      height: max-content;
+      width: 60vw;
+      margin: 10px 0;
+      border-bottom: 1px solid gray;
       & img {
         width: 100%;
         height: 100%;
       }
     }
     & .crew__toggle {
+      padding: 10px 0;
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
       width: 150px;
       margin: auto;
       & .toggle {
-        height: 12px;
-        width: 12px;
+        height: 13px;
+        width: 13px;
         background-color: gray;
         border-radius: 50%;
       }
     }
+  }
+  & .crew__role,
+  .name__div {
+    font-family: "Fraunces-sb", serif;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  & .crew__role {
+    color: #4a646c;
+    font-size: 1.2rem;
+    margin:10px 0 0;
+  }
+  & .name__div {
+    color: #fff;
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+    margin:5px 0 0;
+  }
+  & .crew__info{
+    color: #fff;
+    font-family: 'Barlow-Extra-Light', serif;
+    margin: 30px 20px;
+    font-size: 16px;
   }
 }

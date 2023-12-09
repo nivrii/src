@@ -6,11 +6,30 @@
 }
 :root {
   --white: #fff;
+  --fw4: 400;
+  --fw6: 600;
 }
 @font-face {
-  font-family: font;
-  src: url();
+  font-family: Fraunces-sb;
+  src: url("./assets/fonts/Fraunces/Fraunces_144pt_Soft-Light.ttf");
 }
+@font-face {
+  font-family: Barlow-Extra-Light;
+  src: url("./assets/fonts/barlow/BarlowCondensed-ExtraLight.otf");
+}
+@font-face {
+  font-family: Mersad-sb; 
+  src: url("./assets/fonts/mersad/Mersad_SemiBold.ttf");
+}
+@font-face {
+  font-family: barlow-b; 
+  src: url("./assets/fonts/barlow/Barlow-Extra-Bold.ttf");
+}
+@font-face {
+  font-family: CrimsonT;
+  src: url("./assets/fonts/Crimson/CrimsonText-Semibold.ttf");
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -30,4 +49,18 @@ body {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
+}
+ h2 {
+  font-family: "Barlow-Extra-Light", serif;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  & span {
+    font-family: "barlow-b", serif;
+    color: #3b4951;
+    margin-right: 10px;
+    font-weight: 900;
+    font-size: 1.1rem;
+  }
 }

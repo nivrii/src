@@ -6,7 +6,7 @@ import { bgMobile, bgDesktop, bgTablet } from "../bg";
 export function Crew() {
   const [size, setSize] = useState([0, 0]);
   const [content, setContent] = useState(0);
-  
+
   useLayoutEffect(() => {
     function updateSize() {
       setSize([window.innerWidth, window.innerHeight]);
@@ -47,15 +47,13 @@ export function Crew() {
     <div className="crew__div">
       <div className="crew__header">
         <h2>
-          <span>02</span> meet your crew
+          <span>0{content + 1}</span> meet your crew
         </h2>
       </div>
       <div className="crew__content">
         <div className="img__div">
           <img src={crew[content].images.webp} alt="crew picture" />
         </div>
-        <div className="crew__role">{crew[content].role}</div>
-        <div className="name__div">{crew[content].name}</div>
         <div className="crew__toggle">
           {crew.map((individual) => {
             return (
@@ -67,6 +65,8 @@ export function Crew() {
             );
           })}
         </div>
+        <div className="crew__role">{crew[content].role}</div>
+        <div className="name__div">{crew[content].name}</div>
         <div className="crew__info">{crew[content].bio}</div>
       </div>
     </div>
